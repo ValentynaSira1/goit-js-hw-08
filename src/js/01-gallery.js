@@ -8,7 +8,7 @@ const modalContainer = document.querySelector('.gallery');
 const cardsMarkup = galleryItemsImg (galleryItems);  
   
 modalContainer.insertAdjacentHTML('beforeend', cardsMarkup);  
-modalContainer.addEventListener('click', onImgClick);  
+// modalContainer.addEventListener('click', onImgClick);  
  
 function galleryItemsImg (galleryItems){  
     return galleryItems.map(({preview, original, description}) =>{  
@@ -25,13 +25,6 @@ function galleryItemsImg (galleryItems){
       </div>  
       `;  
     }).join('');  
-}  
-  
-function onImgClick(e) { 
-    if (e.target.nodeName !== 'IMG') { 
-        return 
-    } 
-    
-    const lightbox = new SimpleLightbox(`.gallery a`, { captionsData: `alt`, captionDelay: 250 });  
+  };
+  const lightbox = new SimpleLightbox(`.gallery a`, { captionsData: `alt`, captionDelay: 250 });  
     e.preventDefault(); 
-};
