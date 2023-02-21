@@ -26,5 +26,4 @@ function galleryItemsImg (galleryItems){
       `;  
     }).join('');  
   };
-  const lightbox = new SimpleLightbox(`.gallery a`, { captionsData: `alt`, captionDelay: 250 });  
-    e.preventDefault(); 
+  const lightbox = new SimpleLightbox(`.gallery a`, { captionsData: `alt`, captionDelay: 250 });   
